@@ -1,9 +1,9 @@
 {
-  "name": "fw60",
-  "short_name": "fw60",
-  "description": "fw60",
+  "name": "FW60",
+  "short_name": "FW60",
+  "description": "FW60",
   "lang": "en-US",
-  "start_url": "/fw60/index.html",
+  "start_url": "/FW60/index.html",
   "display": "standalone",
   "background_color": "#EE350F",
   "theme_color": "#EE350F",
