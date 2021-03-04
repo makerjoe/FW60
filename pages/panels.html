@@ -107,13 +107,17 @@
       console.log('Panel Right INSTANCE: opened');
     });
 
-    $.ajax({
-  url: 'https://randomuser.me/api/',
-  dataType: 'json',
-  success: function(data) {
-    console.log(data);
-  }
+    app.request.get('https://randomuser.me/api/').then((res) => {
+  console.log(res.data);
 });
+
+//     $.ajax({
+//   url: 'https://randomuser.me/api/',
+//   dataType: 'json',
+//   success: function(data) {
+//     console.log(data);
+//   }
+// });
 
     return $render;
   }
