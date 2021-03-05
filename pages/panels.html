@@ -107,7 +107,7 @@
       console.log('Panel Right INSTANCE: opened');
     });
 
-    app.request.get('https://randomuser.me/api/').then((res) => {
+    app.request.json('https://randomuser.me/api/').then((res) => {
   console.log(res.data);
 });
 
