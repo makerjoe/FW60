@@ -57,6 +57,7 @@ var mainView = app.views.create('.view-main');
 // debugger
 
 console.log('app initiated!')
+//var response;
 
 var ls = app.loginScreen.create({ el: '.login-screen' });
 //ls.open(); // open loginscreen in startup screen

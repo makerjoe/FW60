@@ -36,18 +36,19 @@
 
         <p><a href="#" data-panel="#panel-left-inst" class="panel-open">Open Left INST Panel</a></p>
         <p><a href="#" data-panel="#panel-right-inst" class="panel-open">Open Right INST Panel</a></p>
-
-        <div class="display-flex justify-content-space-between align-items-flex-start">
-          <div class="flex-shrink-0">Item 1</div>
-          <div class="align-self-center">Item 2</div>
-          <div class="align-self-flex-end">Item 3</div>
-        </div>        
       </div>
     </div>
   </div>
 </template>
 <script>
-  export default (props, { $, $on, $f7 }) => {
+  export default (props, { $, $on, $f7 , $store }) => {
+
+    app.request.json('https://randomuser.me/api/').then((res) => {
+      //console.log('json',res.data);
+      $store.state.users = res.data;
+    });
+    console.log('response:' , $store.state.users);
+    debugger
 
     var panelLeftinst = app.panel.create({
       el: '#panel-left-inst',
@@ -113,10 +114,9 @@
       console.log('Panel Right INSTANCE: opened');
     });
 
-    app.request.json('https://randomuser.me/api/').then((res) => {debugger
-      console.log(res.data);
-    });
-
+    // app.request.json('https://randomuser.me/api/').then((res) => {
+    //   console.log(res.data);
+    // });
 
 //     $.ajax({
 //   url: 'https://randomuser.me/api/',
